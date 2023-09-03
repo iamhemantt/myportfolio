@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="portfolio,website,skills,skill,responsive website,">
+    <meta name="description" content="this website is my portfolio. in this website i showcase myskill like html,css,javacript,c,c++,database management system">
+
+    <title>Portfolio-</title>
+    <style>
+        * {
+            margin: 0;
+            scroll-behavior: smooth;
+            color: #fff;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #222020;
+            height: 100vh;
+        }
+
+        .box {
+            height: 100px;
+            background-color: #222020;
+            box-shadow: 5px 5px 50px black;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        .eye {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: block;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 20px;
+            box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 15px #f2761e inset 0 0 25px #f2761e;
+        }
+
+        .box .eye::before {
+            content: "";
+            position: absolute;
+            border: 10px solid rgb(255, 95, 95);
+            box-sizing: border-box;
+            top: 50%;
+            left: 35px;
+            transform: translate(-50%, -50%);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #000;
+
+        }
+
+        #container {
+            padding: 10px;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #left {
+            color: #ffffff;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #left h1 {
+            font-size: 5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-text-stroke: 1px #ffffff;
+            color: transparent;
+            background: url(back.png);
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: back 10s linear infinite;
+        }
+
+        @keyframes back {
+            100% {
+                background-position: 2000px 0;
+            }
+
+        }
+
+        #left h4 {
+            font-size: 2rem;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        span {
+            transition: all ease-in-out 0.2s;
+            color: #fff;
+
+        }
+
+        #space {
+            padding: 10px;
+        }
+
+
+        #left h2 {
+            font-size: 3rem;
+        }
+
+        #right {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        #right img {
+            height: 50vh;
+            border-radius: 50% 0% 30% 50%;
+            box-shadow: 10px 10px 60px rgb(255, 95, 95);
+        }
+
+        .all-div {
+            margin: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color:#fff;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: 0.2s;
+        }
+
+        a:hover {
+            font-size: 1.7em;
+        }
+
+        @media screen and (max-width:1235px) {
+            #left h1 {
+                font-size: 140%;
+            }
+
+            #left h4 {
+                font-size: 30px;
+            }
+
+            #left h2 {
+                font-size: 103%;
+                margin-top: 2%;
+            }
+
+            #right img {
+                height: 30vh;
+            }
+
+            #container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        main {
+            height: 100vh;
+        }
+
+        .about_me h3 {
+            font-size: 5em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            position: relative;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+
+        .about_me h3::before {
+            content: "About";
+            position: absolute;
+            top: 3px;
+            left: -3;
+            color: rgb(255, 95, 95);
+        }
+
+        #img {
+            position: relative;
+            width: 35vw;
+            height: 50vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 450px;
+            background: var(--img);
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 10px 10px 50px black;
+            transition: 0.2s;
+            margin: 50px;
+        }
+
+        .aboutme {
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;     
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scroller h5{
+            margin-bottom: 50px;
+            margin-top: 50px;
+            text-shadow: 10px 10px 90px rgb(255, 95, 95);
+            padding: 10px;
+            text-transform: uppercase;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:50px;
+            -webkit-text-stroke: 1px rgb(255, 95, 95);
+            font-weight: 900;
+            display: inline-block;
+            color: transparent;
+            transition: all linear 0.3s;
+        }
+
+        h5:hover{
+            color: rgb(255, 95, 95);
+            transform:rotateY(50deg);
+        }
+
+        .cursor{
+            height:20px;
+            width:20px;
+            background-color:rgba(255, 95, 95, 0.88);
+            border-radius: 50%;
+            position: fixed;
+            z-index: 99;
+        }
+
+        .cursor-blur{
+            height:500px;
+            width:500px;
+            background-color:rgba(255, 95, 95, 0.123);
+            border-radius: 50%;
+            position: fixed;    
+            filter: blur(50px);
+        }
+
+        #skill .progress-bar{
+            margin: 20px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+        #skill .progress-bar p{
+            font-size: 100px;
+        }
+
+        .bar-content{
+            padding: 10px;
+            flex-direction: column;
+            margin: 10px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills{
+            width: 50%;
+            border-radius: 10px;
+            background-color: #ddd;
+        }
+       #skill  p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 10px;
+            word-spacing: 2px;
+            padding: 10px;
+            -webkit-text-stroke:1px  rgb(255, 18, 18) ;
+        }
+
+        .skilll{
+            text-align: right; 
+            padding-top: 20px;
+            margin: 10px;
+            color: white;
+            box-shadow: 10px 10px 50px #000;
+        }
+
+
+
+
+        .html{
+            color: #fff;
+            width: 80%;
+           animation: html  ease 2s;
+            background-color: rgb(52, 52, 52);
+        }
+
+        @keyframes html {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 80%;
+            }
+        }
+
+        .css{
+            color: #fff;
+            animation: css  ease 2s;
+            width: 75%;
+            background-color: rgb(64, 65, 65);
+        }
+
+        @keyframes css {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 75%;
+            }
+        }
+
+        .javascript{
+            width: 50%;
+            animation: javascript  ease 2s;
+            color: #fff;
+            background-color: rgb(43, 43, 43);
+        }
+
+        @keyframes javascript {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 50%;
+            }
+        }
+
+        .sql{
+            color: #fff;
+            width: 83%;
+            animation: sql  ease 2s;
+            background-color: rgb(49, 49, 49);
+        }
+
+        @keyframes sql {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 83%;
+            }
+        }
+
+        .c{
+            color: #fff;
+            width: 75%;
+            animation: c  ease 2s;
+            background-color: rgb(62, 62, 62);
+        }
+
+        @keyframes c {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 75%;
+            }
+        }
+
+        .cpp{
+            width: 40%;
+            color: #fff;
+            animation: cpp ease 2s;
+            background-color: rgb(50, 50, 50);
+        }
+
+        @keyframes cpp {
+            0%{
+                width: 0%;
+            }
+            80%{
+                width: 40%;
+            }
+        }
+
+        footer{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 10vh;
+            box-shadow: 10px 10px 50px #000;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="cursor">
+
+    </div>
+    <div class="cursor-blur">
+
+    </div>
+    
+    <header>
+
+        <div class="box">
+
+            <nav>
+                <ul>
+                    <li><a href="#container">Home</a></li>
+    
+                </ul>
+            </nav>
+            <div class="eye"></div>
+            <div class="eye"></div>
+    
+            <nav>
+                <ul>
+                    <li><a href="#about_section">About</a></li>
+    
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="container">
+            <div id="left" class="all-div">
+                <h4>Hello, I am</h4>
+                <h1>Hemant Bodade</h1>
+                <h2><span></span><span></span>
+                    <span>W</span>
+                    <span>e</span>
+                    <span>b</span>
+                    <span id="space"></span>
+                    <span>d</span>
+                    <span>e</span>
+                    <span>v</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>o</span>
+                    <span>p</span>
+                    <span>e</span>
+                    <span>r</span>
+                </h2>
+            </div>
+            <div id="right" class="all-div">
+                <img src="Picsart_22-06-18_17-30-49-042.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="about_me" id="about_section">
+            <h3>About</h3>
+            <div class="aboutme">
+                <div id="img" style="--img:url(Picsart_22-05-12_10-20-04-485-01.jpeg);">
+                </div>
+                <div class="scroller">
+                    <div class="scroler1">
+                    <marquee  direction="left" scrollamount="25">
+                    <h5>Hello! i am Hemant Bodade </h5>
+                    <h5>I participate in </h5>
+                      <h5>web Development</h5>
+                    <h5>Hackthone</h5>
+                    </div>
+                </marquee>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+      <div id="skill">
+        <div class="progress-bar">
+            <p>My Skill</p>
+        </div>
+        <div class="bar-content">
+
+                <p>HTML</p>
+                <div class="skills">
+                    <div class="skilll html">80%</div>
+                </div>
+
+                <p>CSS</p>
+                <div class="skills">
+                    <div class="skilll css">75%</div>
+                </div>
+
+                <p>JAVASCRIPT</p>
+                <div class="skills">
+                    <div class="skilll javascript">50%</div>
+                </div>
+
+                <p>SQL</p>
+                <div class="skills">
+                    <div class="skilll sql">83%</div>
+                </div>
+
+                <p>C PROGRAMMING LANGUAGE</p>
+                <div class="skills">
+                    <div class="skilll c">75%</div>
+                </div>
+
+                <p>C++ PROGRAMMING LANGUAGE</p>
+                <div class="skills">
+                    <div class="skilll cpp">40%</div>
+                </div>
+    
+        </div>
+      </div>
+      <footer >
+        <p>Thank you</p>
+    </footer>
+
+    </main>
+
+    <script>
+        document.querySelector('body').addEventListener('mousemove', eyeball);
+
+        function eyeball() {
+            const eye = document.querySelectorAll('.eye');
+            eye.forEach(eye => {
+                let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2);
+                let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
+
+                let radian = Math.atan2(event.pageX - x, event.pageY - y)
+                let rotaion = (radian * (180 / Math.PI) * -1) + 270;
+                eye.style.transform = "rotate(" + rotaion + "deg)"
+            });
+        }
+
+        let imgs = document.querySelectorAll('#img').forEach(img =>{
+            img.addEventListener('mousemove',(e)=>{
+                let x = e.offsetX;
+                let y = e.offsetY;
+                let imgwidth = img.clientWidth;
+                let imgheight = img.clientHeight;
+
+                let transX = (x - imgwidth/2);
+                let transY = (y - imgheight/2);
+
+                img.style.transform = `translateX(${transX}px)
+                translateY(${transY}px)`;
+                img.style.backgroundPositionX = -x/2+ 'px';
+                img.style.backgroundPositionY = -y/2 +'px';
+            })          
+
+
+            img.addEventListener('mouseout',(e)=>{
+                img.style.transform = ``;
+                
+                img.style.backgroundPositionX=``;
+                img.style.backgroundPositionY=``;
+            })
+            
+        })
+
+       let crsr  = document.querySelector(".cursor");
+        let blurs = document.querySelector('.cursor-blur');
+        document.addEventListener('mousemove',function(dets){
+            crsr.style.left = dets.x+"px";
+            crsr.style.top = dets.y+"px";
+            blurs.style.left = dets.x-250+"px";
+            blurs.style.top = dets.y-250+"px";
+
+        })
+    </script>
+</body>
+
+</html>
